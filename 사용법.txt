@@ -5,4 +5,4 @@
 
 4. web.py 켜기
 
-5. start.bat 켜서 실행하기 
+5. main.py 켜서 실행하기
