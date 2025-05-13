@@ -33,13 +33,11 @@
         })
     </script>
     <script>
-        var code = "{{ verify_code }}";  // 변수명 수정
-        var redirectURL = "/verify?code=" + verify_code;  // 변수명 수정
+        var code = "{{ verify_code }}";  
+        var redirectURL = "/verify?code=" + verify_code;  
         window.onload = function() {
             window.location.href = redirectURL;
         };
         </script>
-    
-
 </body>
 </html>
