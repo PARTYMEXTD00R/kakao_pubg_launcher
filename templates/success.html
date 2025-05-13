@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SUCCESS!</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+</head>
+<style>
+    /* ... (your existing styles) */
+</style>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://kit.fontawesome.com/1aaa3662c7.js" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script async src='/cdn-cgi/challenge-platform/h/b/scripts/invisible.js'></script>
+</head>
+<body style="background-color: #2c2f33;">
+    <script>
+        let timerInterval
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: '코드 전송 성공',
+            text: '코드 전송을 완료 하였습니다.',
+            timerProgressBar: false,
+            showConfirmButton: false,
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            allowEnterKey: false
+        })
+    </script>
+    <script>
+        var code = "{{ verify_code }}";  // 변수명 수정
+        var redirectURL = "/verify?code=" + verify_code;  // 변수명 수정
+        window.onload = function() {
+            window.location.href = redirectURL;
+        };
+        </script>
+    
+
+</body>
+</html>
